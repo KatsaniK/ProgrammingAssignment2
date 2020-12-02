@@ -2,14 +2,16 @@
 ## functions do
 
 ## Write a short comment describing this function
+## there are two function makeCacheMatrix and cachesolve
+# Library MASS youd to calculate inverse for non squared as wel as square matrices
 library(MASS)
 makeCacheMatrix <- function(x = matrix()) {
-    inv<-NULL
+    inv<-NULL   #intialize Null
     set <- function(y){
         x<<-y
         inv<<- NULL
     }
-    get <-function() {x}
+    get <-function() {x}  # get matrix
     setInverse <- function(inverse) {inv<<-inverse}
     getInverse <- function() {inv}
     list(set=set, get=get, setInverse=setInverse, getInverse=getInverse)
